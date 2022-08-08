@@ -95,7 +95,12 @@ function M.create_thread_buffer(threads, repo, number, side, path)
   if not vim.startswith(path, "/") then
     path = "/" .. path
   end
+
   local line = threads[1].originalStartLine
+  if line == vim.NIL then
+    line = threads[1].startLine
+  end
+
   local bufname = string.format("octo://%s/review/%s/threads/%s%s:%d", repo, current_review.id, side, path, line)
   local bufnr = vim.fn.bufnr(bufname)
   local buffer
