@@ -106,8 +106,8 @@ local function get_hl_links()
     ReactionViewer = "OctoViewer",
     PassingTest = "OctoGreen",
     FailingTest = "OctoRed",
-    DiffstatAdditions = "OctoGreen ",
-    DiffstatDeletions = "OctoRed ",
+    DiffstatAdditions = "OctoGreen",
+    DiffstatDeletions = "OctoRed",
     DiffstatNeutral = "OctoGrey",
 
     StateOpen = "OctoGreen",
